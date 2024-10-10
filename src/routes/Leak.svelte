@@ -20,7 +20,7 @@
 </script>
 
 <div class="container">
-  <ScrollList align="bottom" pin={true} items={users} getKey={(user) => user.id} controller={(c) => {
+  <ScrollList align="bottom" pin={users.length > 1} items={users} getKey={(user) => user.id} controller={(c) => {
     ctrl = c
   }}>
     {#snippet children({ item: user })}
